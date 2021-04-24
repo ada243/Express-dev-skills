@@ -11,6 +11,7 @@ const app = express()
 app.set("view engine", "ejs")
 
 //mount our middleware with app.use
+app.use(express.urlencoded({ extended: false}))
 
 
 // mount our routes

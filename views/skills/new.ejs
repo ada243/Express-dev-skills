@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+<body>
+    <%- include("../partials/nav") %>
+    <h1>New Skill</h1>
+    <form action="/skills" method="POST" autocomplete="off">
+        <input type="text" name="skill" placeholder="skill name">
+        <br><br>
+        <input type="number" name="level">
+        <br><br>
+        <input type="text" name="description" placeholder="description">
+        <br><br>
+        <button type="submit">Save Skill</button>
+    </form>
+</body>
+</html>
