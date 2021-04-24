@@ -16,9 +16,14 @@ const create = (skill) => {
     skills.push(skill)
 }
 
+const deleteOne = (id) => {
+    skills.splice(id, 1)
+}
+
 
 module.exports = {
      getAll,
      getOne,
-     create
+     create,
+     deleteOne
 };

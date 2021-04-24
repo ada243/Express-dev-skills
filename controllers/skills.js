@@ -17,6 +17,11 @@ const newSkill = (req, res) => {
     res.render("skills/new")
 }
 
+const deleteSkill = (req, res) => {
+    Skill.deleteOne(req.params.id)
+    res.redirect("/skills")
+}
+
 const create = (req, res) => {
     console.log(req.body)
     // req.body.done = false
@@ -30,5 +35,6 @@ module.exports = {
     index,
     show,
     new: newSkill,
-    create
+    create,
+    delete: deleteSkill
 }

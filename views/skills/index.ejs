@@ -11,6 +11,11 @@
                 -
                 <stong>Level:</strong> <%= s.level %> 
             </li>
+            <li>
+                <form action="/skills/<%= i %>?_method=DELETE" class="delete-form" method="POST">
+                <button type="submit">Delete Skill</button>
+                </form>
+            </li>
 
         <% }) %> 
     </ul>

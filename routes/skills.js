@@ -12,6 +12,8 @@ const skillsCtrl = require("../controllers/skills")
 router.get("/", skillsCtrl.index)
 //new Route
 router.get("/new", skillsCtrl.new)
+//Delete route
+router.delete("/:id", skillsCtrl.delete)
 //create route
 router.post("/", skillsCtrl.create)
 //SHOW ROUTE

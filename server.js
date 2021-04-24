@@ -1,5 +1,7 @@
 // require modules and declare settings variables
 const express = require("express");
+const morgan = require("morgan")
+const methodOverride = require("method-override")
 const port = 3000;
 
 const skillsRouter = require("./routes/skills")
@@ -11,6 +13,7 @@ const app = express()
 app.set("view engine", "ejs")
 
 //mount our middleware with app.use
+app.use(methodOverride("_method"))
 app.use(express.urlencoded({ extended: false}))
 
 
